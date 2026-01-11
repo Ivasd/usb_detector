@@ -1,0 +1,21 @@
+/**:
+    ros__parameters:
+      video_device: "/dev/video2"
+      framerate: 180.0
+      io_method: "mmap"
+      frame_id: "camera2"
+      # 必须改称这个，驱动才认识 MJPEG 压缩格式
+      pixel_format: "mjpeg2rgb" 
+      camera_info_url: "package://usb_cam/config/usb_camera_info.yaml"
+      image_width: 800
+      image_height: 600
+      camera_name: "usb_camera_1"
+      
+      # 重点：全部设为 -1，告诉驱动“不要去碰硬件控制”，由我们手动在外部设好
+      brightness: -1
+      contrast: -1
+      saturation: -1
+      sharpness: -1
+      gain: -1
+      auto_white_balance: true # 设为 true 匹配硬件默认
+      autoexposure: true       # 设为 true 匹配硬件默认

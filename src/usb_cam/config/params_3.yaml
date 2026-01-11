@@ -1,0 +1,30 @@
+/**:
+    ros__parameters:
+      video_device: "/dev/video2"
+      framerate: 100.0  # 保持高帧率设置
+      io_method: "mmap"
+      frame_id: "camera2"
+      
+      # 尝试这两个格式之一
+      # pixel_format: "raw_mjpeg"  # 选项1：直接使用原始MJPG
+      pixel_format: "mjpeg2rgb"  # 选项2：使用MJPG转RGB
+      
+      image_width: 640
+      image_height: 480
+      camera_name: "test_camera2"
+      camera_info_url: "package://usb_cam/config/usb_camera_info.yaml"
+      
+      # 全部使用自动模式
+      auto_white_balance: true
+      autoexposure: true
+      autofocus: true
+      
+      # 注释掉所有可能导致错误的参数
+      # brightness: -1
+      # contrast: -1
+      # saturation: -1
+      # sharpness: -1
+      # gain: 0
+      # white_balance: 1000
+      # exposure: 1000
+      # focus: -1
